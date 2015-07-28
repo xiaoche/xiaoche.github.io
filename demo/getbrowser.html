@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Browser</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="renderer" content="webkit" />
+</head>
+<body>
+
+	<script>
+		var userAgent = navigator.userAgent, 
+		    rMsie = /(msie\s|trident.*rv:)([\w.]+)/, 
+		    rFirefox = /(firefox)\/([\w.]+)/, 
+		    rOpera = /(opera).+version\/([\w.]+)/, 
+		    rChrome = /(chrome)\/([\w.]+)/, 
+		    rSafari = /version\/([\w.]+).*(safari)/;
+	    var browser;
+	    var version;
+	    var ua = userAgent.toLowerCase();
+	    function uaMatch(ua) {
+	        var match = rMsie.exec(ua);
+	        if (match != null) {
+	            return { browser : "IE", version : match[2] || "0" };
+	        }
+	        var match = rFirefox.exec(ua);
+	        if (match != null) {
+	            return { browser : match[1] || "", version : match[2] || "0" };
+	        }
+	        var match = rOpera.exec(ua);
+	        if (match != null) {
+	            return { browser : match[1] || "", version : match[2] || "0" };
+	        }
+	        var match = rChrome.exec(ua);
+	        if (match != null) {
+	            return { browser : match[1] || "", version : match[2] || "0" };
+	        }
+	        var match = rSafari.exec(ua);
+	        if (match != null) {
+	            return { browser : match[2] || "", version : match[1] || "0" };
+	        }
+	        if (match != null) {
+	            return { browser : "", version : "0" };
+	        }
+	    }
+	    var browserMatch = uaMatch(userAgent.toLowerCase());
+
+	    if (browserMatch.browser) {
+	        browser = browserMatch.browser;
+	        version = browserMatch.version;
+	    }
+ 
+
+    	document.write("<h1 style='text-align:center; margin:40px 0;'>此页面渲染的浏览器版本为<font style='color:red'>" +browser+" "+version+ "</font></h1>");
+
+    	document.write("<h2 style='text-align:center; margin:40px 0;'>此页面的IE Document Mode为<font style='color:red'>" +document.documentMode+ "</font></h2>");
+
+    	document.write("<h3 style='text-align:center; margin:40px 0;'>UA:<font style='color:red'>" +userAgent+ "</font></h3>");
+    
+  
+	</script>
+	
+</body>
+</html>
