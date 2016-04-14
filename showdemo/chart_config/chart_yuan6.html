@@ -1,0 +1,75 @@
+{
+	"chartType":["pie"],
+	"chartOption":{
+		"title":{
+			"text":"高新技术产业产值占规\n模以上工业比重达45%",
+			"x":"center",
+			"y":"bottom",
+			"textStyle":{
+				"color":"rgb(136, 136, 136)",
+				"fontWeight":"bold",
+				"fontFamily":"微软雅黑",
+				"fontSize":"12"
+			}
+		},
+		"tooltip":{
+	        "trigger":"item",
+	        "formatter":"{c}%"
+	    },
+		"series":[{
+			"type":"pie",
+			"center":["50%","40%"],
+			"radius":[0,"60%"],
+			"selectedMode":"multiple",
+			"data":[
+				{
+					"value":"45",
+					"name":"45%",
+					"itemStyle":{
+						"normal":{
+							"color":"#c00000",
+							"borderWidth":2,
+							"borderColor":"rgb(136, 136, 136)",
+							"label":{
+								"position":"inner",
+								"textStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							},
+							"labelLine":{
+								"length":1,
+								"lineStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							}
+						}
+					}
+					
+				},
+				{
+					"value":"55",
+					"name":"55%",
+					"itemStyle":{
+						"normal":{
+							"color":"rgba(0,0,0,0)",
+							"borderWidth":2,
+							"borderColor":"rgb(136, 136, 136)",
+							"label":{
+								"position":"inner",
+								"textStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							},
+							"labelLine":{
+								"length":1,
+								"lineStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							}
+						}
+					}
+				}
+			]
+		}]
+	}
+}

@@ -1,0 +1,75 @@
+{
+	"chartType":["pie"],
+	"chartOption":{
+		"title":{
+			"text":"工业技改投资占工业\n投资比重达68.6%",
+			"x":"center",
+			"y":"bottom",
+			"textStyle":{
+				"color":"rgb(136, 136, 136)",
+				"fontWeight":"bold",
+				"fontFamily":"微软雅黑",
+				"fontSize":"12"
+			}
+		},
+		"tooltip":{
+	        "trigger":"item",
+	        "formatter":"{c}%"
+	    },
+		"series":[{
+			"type":"pie",
+			"center":["50%","40%"],
+			"radius":[0,"60%"],
+			"selectedMode":"multiple",
+			"data":[
+				{
+					"value":"68.6",
+					"name":"68.6%",
+					"itemStyle":{
+						"normal":{
+							"color":"#c00000",
+							"borderWidth":2,
+							"borderColor":"rgb(136, 136, 136)",
+							"label":{
+								"position":"inner",
+								"textStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							},
+							"labelLine":{
+								"length":1,
+								"lineStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							}
+						}
+					}
+					
+				},
+				{
+					"value":"31.4",
+					"name":"31.4%",
+					"itemStyle":{
+						"normal":{
+							"color":"rgba(0,0,0,0)",
+							"borderWidth":2,
+							"borderColor":"rgb(136, 136, 136)",
+							"label":{
+								"position":"inner",
+								"textStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							},
+							"labelLine":{
+								"length":1,
+								"lineStyle":{
+									"color":"rgba(0,0,0,0)"
+								}
+							}
+						}
+					}
+				}
+			]
+		}]
+	}
+}

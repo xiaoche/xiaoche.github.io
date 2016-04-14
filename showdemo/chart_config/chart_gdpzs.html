@@ -1,0 +1,74 @@
+{
+	"chartType":["bar"],
+	"chartOption":{
+		"title":{
+			"text":"GDP增速",
+			"y":"top",
+			"x":"right",
+			"textStyle":{
+				"color":"rgb(136, 136, 136)",
+				"fontWeight":"bold",
+				"fontFamily":"微软雅黑",
+				"fontSize":"13"
+			}
+		},
+	    "tooltip":{
+	        "trigger":"axis",
+	        "formatter":"{b} : {c}%",
+	        "axisPointer":{
+	            "type":"shadow"
+	        }
+	    },
+		"grid":{"x":0,"y":18,"width":280,"height":80,"borderWidth":0},
+		"xAxis":{
+			"type":"category",
+			"boundaryGap":"false",
+			"data":["南通","江苏","全国"],
+			"axisLine":{
+				"show":true,
+				"lineStyle":{
+					"color":"#389cd9",
+					"width":6
+				}
+			},
+			"splitLine":{"show":false},
+			"axisTick":{"show":false},
+			"axisLabel":{
+				"show":true,
+				"margin":12,
+				"textStyle":{
+					"color":"rgb(136, 136, 136)",
+					"fontWeight":"bold",
+					"fontFamily":"微软雅黑",
+					"fontSize":"13"
+				}
+			}
+		},
+		"yAxis":{
+			"show":"false",
+			"axisLine":{"show":false},
+			"splitLine":{"show":false},
+			"axisLabel":{"show":false},
+			"min":"4.5","max":"11.5"
+		},
+		"series":[{
+			"type":"bar",
+			"barWidth":"20",
+			"data":["9.6","8.5","6.9"],
+			"itemStyle":{
+				"normal":{
+					"label":{
+						"show":"true",
+						"formatter":"{c}%",
+						"textStyle":{
+							"color":"rgb(136, 136, 136)",
+							"fontWeight":"bold",
+							"fontFamily":"微软雅黑",
+							"fontSize":"14"
+						}
+					}
+				}
+			}
+		}]
+	}
+}
